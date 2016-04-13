@@ -19,3 +19,7 @@ k = seq(0,1,by=1/(2^j-2))
 
 # Plot original function
 plot(k, lapply(k,g),ylab="g",main="original function")
+
+# New dwt object
+# I'm not doing this right
+hello = dwt(k ,n.levels=6)
