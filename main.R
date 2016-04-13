@@ -39,7 +39,7 @@ plot(k, y,ylab="g",main="original function")
 hello = dwt(y ,n.levels=6, filter="haar")
 
 g_j = function(x) {
-	m = hello@W$w1
+	m = hello@W$W1
 	y = 0 
 	len = length(m[,1])
 	for (k in 1:len) {
@@ -48,5 +48,5 @@ g_j = function(x) {
 	return(y)
 }
 
-y_hat = as.numeric(vapply(k, g_j, FUN.VALUE=is.numeric(1)))
+y_hat = as.numeric(vapply(k, g_j, FUN.VALUE=numeric(1)))
 plot(k,y_hat)
