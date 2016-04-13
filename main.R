@@ -32,7 +32,8 @@ k = seq(0, 1-1/2^7, by=1/(2^j-1))
 y = as.numeric(lapply(k,g))
 
 # Plot original function
-plot(k, y,ylab="g",main="original function")
+plot(k, y, ylab="g", main="original function")
+grid()
 
 # New dwt object
 # I'm not doing this right
@@ -49,4 +50,5 @@ g_j = function(x) {
 }
 
 y_hat = as.numeric(vapply(k, g_j, FUN.VALUE=numeric(1)))
-plot(k,y_hat)
+plot(k, y_hat, main="Transformed function")
+grid()
