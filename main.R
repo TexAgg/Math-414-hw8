@@ -2,6 +2,7 @@
 rm(list=ls())
 
 library(wavelets)
+#library(wavethresh)
 
 #' Haar scaling function
 #' 
@@ -50,5 +51,5 @@ g_j = function(x) {
 }
 
 y_hat = as.numeric(vapply(k, g_j, FUN.VALUE=numeric(1)))
-plot(k, y_hat, main="Transformed function")
+plot(k, y_hat, main="Coefficients")
 grid()
